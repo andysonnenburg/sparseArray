@@ -1,0 +1,26 @@
+{
+  "name": "sparseArray",
+  "version": "0.0.0",
+  "description": "Sparse Array",
+  "main": "lib/sparseArray.js",
+  "dependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib": "~0.8.0",
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "requirejs": "~2.1.9",
+    "servedir": "~0.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonyandy/sparseArray.git"
+  },
+  "author": "Andy Sonnenburg",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/sonyandy/sparseArray/issues"
+  }
+}
