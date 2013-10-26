@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 	'use strict';
 
-	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		jshint: {
@@ -12,7 +11,7 @@ module.exports = function(grunt) {
 				es3: true,
 				forin: true,
 				immed: true,
-				latedef: 'nofunc',
+				// latedef: 'nofunc',
 				newcap: true,
 				noarg: true,
 				noempty: true,
@@ -24,8 +23,9 @@ module.exports = function(grunt) {
 				strict: true,
 				trailing: true,
 				globals: {
+					define: true,
 					module: false,
-					define: false
+					require: false
 				}
 			}
 		},
@@ -37,8 +37,9 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['jshint', 'watch']);
+	grunt.registerTask('test', ['jshint']);
 };
